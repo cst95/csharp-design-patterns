@@ -36,6 +36,16 @@ namespace DesignPatterns
                 .Build();
 
             Console.WriteLine(person3);
+            
+            // Faceted Builder Pattern
+            var feb = new FacetedEmployeeBuilder();
+            Employee person4 = feb
+                .Job
+                .WorksAs("Developer")
+                .Name
+                .Called("Charlie");
+
+            Console.WriteLine(person4);
         }
     }
 }
