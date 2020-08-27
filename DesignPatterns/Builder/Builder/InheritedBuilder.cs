@@ -4,9 +4,9 @@
     {
         public abstract class EmployeeBuilder
         {
-            protected Employee _employee = new Employee();
+            protected readonly Employee Employee = new Employee();
 
-            public Employee Build() => _employee;
+            public Employee Build() => Employee;
         }
 
         public class EmployeeJobBuilder<TSelf> : EmployeeBuilder
@@ -14,7 +14,7 @@
         {
             public TSelf WorksAs(string job)
             {
-                _employee.Job = job;
+                Employee.Job = job;
                 return (TSelf) this;
             }
         }
@@ -24,7 +24,7 @@
         {
             public TSelf WithName(string name)
             {
-                _employee.Name = name;
+                Employee.Name = name;
                 return (TSelf) this;
             }
         }
@@ -34,7 +34,7 @@
         {
             public TSelf Earns(int salary)
             {
-                _employee.Salary = salary;
+                Employee.Salary = salary;
                 return (TSelf) this;
             }            
         }

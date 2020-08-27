@@ -1,10 +1,13 @@
-﻿namespace Builder
+﻿using System;
+
+namespace Builder
 {
     public class Employee
     {
         public string Name { get; set; }
         public string Job { get; set; }
         public int Salary { get; set; }
+        public DateTime StartTime { get; set; }
 
         public class Builder : InheritedBuilder.EmployeeSalaryBuilder<Builder>
         {

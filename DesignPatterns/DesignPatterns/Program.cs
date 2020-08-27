@@ -19,13 +19,23 @@ namespace DesignPatterns
             Console.WriteLine(person);
             
             // Inherited Builder Pattern
-           
             var person2 = Employee.New
                 .WorksAs("Developer")
                 .WithName("Charlie")
                 .Earns(12000)
                 .Build();
 
+            Console.WriteLine(person2);
+            
+            // Functional Builder Pattern
+            var fb = new FunctionEmployeeBuilder();
+            var person3 = fb
+                .WithName("Charlie")
+                .WorksAs("Developer")
+                .Earns(1000)
+                .Build();
+
+            Console.WriteLine(person3);
         }
     }
 }
