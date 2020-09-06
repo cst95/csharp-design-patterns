@@ -14,3 +14,4 @@ A factory can take care of object creation, without exposing the creation logic 
 The prototype pattern allows you to copy exisiting objects (deep cloning) without making your code dependent on their classes. The objects that support cloning are called prototypes.
 
 ### Singleton
+The singleton pattern allows you to ensure that a class can only be instantiated once, i.e there is only a single instance of the class throughout the lifetime of the application.
